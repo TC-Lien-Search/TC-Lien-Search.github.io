@@ -32,7 +32,6 @@ body {
   opacity: 0;
 }
 .main {
-  padding-top:45px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -111,6 +110,20 @@ section .right {
 }
 h2 {
   font-weight: bold;
+  font-size:230%;
+}
+h3 {
+  margin-top:0;
+  background: white;
+  margin-left: -10px;
+  padding-left: 10px;
+  width: fit-content;
+  padding-right: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-shadow: none;
+  color: darkcyan;
+  box-shadow: 2px 2px 2px black;
 }
 .order-btn {
   background: #e2c275;
@@ -128,8 +141,12 @@ h2 {
   box-shadow:none;
 }
 @media screen and (max-width: 950px) {
+  h2 {
+    font-size:200%;
+  }
   .main {
     display:block;
+    padding-top:45px;
   }
   .inner {
     display:block;
