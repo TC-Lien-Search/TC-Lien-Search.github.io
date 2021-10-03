@@ -12,8 +12,6 @@ body {
 }
 .bg-front,
 .bg-back {
-  transition:opacity 3s;
-  position:absolute;
   z-index:0;
   top:0;
   left:0;
@@ -21,9 +19,11 @@ body {
   height:100%;
   background-size:cover;
   background-position: center;
-  opacity:1;
 }
 .bg-front {
+  transition:opacity 3s;
+  position:absolute;
+  opacity:1;
   background-image:url('./img/florida-1.jpg');
 }
 .bg-back {

@@ -1,4 +1,4 @@
-const bgImageArr = ['florida-1.jpg','florida-2.jpg','florida-3.jpg','florida-4.jpg','florida-5.jpg'];
+const bgImageArr = ['florida1.jpg','florida2.jpg','florida3.jpg','florida4.jpg','florida5.jpg'];
 let imgArrIdx = 2;
 let bgFront = document.querySelector('.bg-front');
 let bgBack = document.querySelector('.bg-back');
