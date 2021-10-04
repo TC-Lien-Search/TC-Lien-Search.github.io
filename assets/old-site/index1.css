@@ -24,10 +24,10 @@ body {
   transition:opacity 3s;
   position:absolute;
   opacity:1;
-  background-image:url('./img/florida-1.jpg');
+  background-image:url('./img/florida1.jpg');
 }
 .bg-back {
-  background-image:url('./img/florida-2.jpg');
+  background-image:url('./img/florida2.jpg');
 }
 .fade-out {
   opacity: 0;

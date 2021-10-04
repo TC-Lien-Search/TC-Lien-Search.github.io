@@ -5,14 +5,12 @@ let bgBack = document.querySelector('.bg-back');
 // let bgInterval;
 
 bgFront.addEventListener('transitionend', (e)=>{
-  console.log(e.target);
   if(!bgImageArr[imgArrIdx]) imgArrIdx = 0;
   if(bgFront.classList.contains('fade-out')){
     bgFront.style.backgroundImage = `url(./img/${bgImageArr[imgArrIdx]})`;
   } else {
     bgBack.style.backgroundImage = `url(./img/${bgImageArr[imgArrIdx]})`;
   }
-  imgArrIdx++;
 })
 
 setInterval(()=>{
