@@ -125,7 +125,8 @@
   }, true)
 
   // Contact Form Submit
-  on('click','.contact-form-submit', function(e){
+  on('submit','#contact-form', function(e){
+    e.preventDefault();
     emailjs.sendForm('service_2qal3w6','template_v5klh6q', '#contact-form')
     .then(resp => {
       document.querySelector('.sent-message').style.display = 'block';
