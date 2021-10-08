@@ -32,11 +32,20 @@
     // Contact Form Submit
   on('submit','#order-form', function(e){
     e.preventDefault();
-    emailjs.sendForm('service_2qal3w6','template_1h7dyyt', '#order-form')
-    .then(resp => {
-      document.querySelector('.sent-message').style.display = 'block';
-    })
-    .catch(err =>{
-      document.querySelector('.error-message').style.display = 'block';
-    })
+    // emailjs.sendForm('service_2qal3w6','template_1h7dyyt', '#order-form')
+    // .then(resp => {
+    //   document.querySelector('.sent-message').style.display = 'block';
+    // })
+    // .catch(err =>{
+    //   document.querySelector('.error-message').style.display = 'block';
+    // })
   });
+
+  /**
+   * Mobile nav toggle
+   */
+  on('click', '.mobile-nav-toggle', function(e) {
+    select('#navbar').classList.toggle('navbar-mobile')
+    this.classList.toggle('bi-list')
+    this.classList.toggle('bi-x')
+  })
