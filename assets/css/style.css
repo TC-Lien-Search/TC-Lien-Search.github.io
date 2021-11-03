@@ -212,7 +212,7 @@ h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 .navbar .order-link {
-  color:goldenrod;
+  color:goldenrod !important;
 }
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
