@@ -1445,3 +1445,64 @@ form label {
 .order-now {
   margin-top:45px;
 }
+.manual-address-checkbox {
+  padding:10px !important;
+  margin-right:10px;
+  cursor:pointer;
+}
+.manual-address-label {
+  margin-top:3px;
+  cursor:pointer;
+}
+#order-form input{
+  font-size:120%;
+}
+
+/* Geocode */
+.geocode-outer {
+  
+}
+.geocode-inner {
+}
+.geocode-item {
+    border-bottom:solid 2px grey;
+  cursor:pointer;
+  user-select:none;
+}
+.geocode-item:first-child {
+  border-top:solid 2px grey;
+}
+.geocode-item p {
+  margin:0;
+  padding:10px 0;
+  padding-left:10px;
+}
+.geocode-item:hover {
+  background:lightgray;
+}
+.geocode-item:active {
+  background:white;
+  border:solid thin cadetblue;
+}
+.form-submit {
+  cursor:pointer;
+  box-shadow:1px 1px 4px black;
+}
+.form-submit:active {
+  box-shadow:none;
+}
+.form-submit:disabled {
+  background:grey !important;
+}
+.order-form-msg {
+  text-align:center;
+  margin-top:15px;
+}
+.order-form-success {
+  font-size:120%;
+  color:green;
+}
+.order-form-fail {
+  font-size:120%;
+  color:red;
+}

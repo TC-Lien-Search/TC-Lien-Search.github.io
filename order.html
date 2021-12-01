@@ -61,37 +61,48 @@
         <div class="form">
           <form id="order-form" class="contact-form order-form">
             <div class="row">
-              <div class="col-md-6 form-group">
-                <label>Full Name:</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              </div>
-            </div>
-              <div class="col-md-6 form-group mt-3">
+              <div class="form-group mt-3">
                 <label>Email:</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email">
               </div>
               <div class="form-group mt-3">
-                <label>Field 1:</label>
-                <input type="text" class="form-control" name="field1" id="field1" placeholder="Field 1" required>
+                <label>Phone:</label>
+                <input type="text" class="form-control" name="phone" id="phone" required>
               </div>
               <div class="form-group mt-3">
-                <label>Field 2:</label>
-                <input type="text" class="form-control" name="field2" id="field2" placeholder="Field 2" required>
+                <label>Parcel ID:</label>
+                <input type="text" class="form-control" name="parcel_id" id="parcel_id" required>
               </div>
               <div class="form-group mt-3">
-                <label>Field 3:</label>
-                <input type="text" class="form-control" name="field3" id="field3" placeholder="Field 3" required>
+                <label>Seller Full Name:</label>
+                <input type="text" class="form-control" name="seller_name" id="seller_name" required>
+              </div>
+              <div class="form-group mt-3">
+                <label>Buyer Full Name (optional):</label>
+                <input type="text" class="form-control" name="buyer_name" id="buyer_name">
+              </div>
+              <div class="form-group mt-3">
+                <label>Property Address (select official address from list below):</label>
+                <input type="text" class="form-control" name="property_address" id="property_address" required>
+                <div class="geocode-outer">
+                  <div class="geocode-inner"></div>
+                </div>
+              </div>
+              <div class="form-group mt-2">
+                <input class="form-check-input manual-address-checkbox" type="checkbox" value="false" name="manual_address" id="manual_address">
+                <label class="form-check-label manual-address-label" for="manual_address">
+                  Enter Address Manually (if you can't find it or it's not exact)
+                </label>
               </div>
               <div class="form-group mt-3">
                 <label>Notes:</label>
-                <textarea class="form-control" name="notes" rows="5" placeholder="Notes" required></textarea>
+                <textarea class="form-control" name="notes" rows="5" placeholder="Any additional information you would like us to be aware of" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="error-message">There was an error. Please call us or email us directly at: <a href="mailto:tcliensearch@gmail.com">TCLienSearch@gmail.com</a></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <button type="submit" class="form-submit btn btn-primary mt-5">Request Lien Search</button>
+              <div class="order-form-msg">
+                <p class="order-form-success"></p>
+                <p class="order-form-fail"></p>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </div>
           </form>
         </div>
 
@@ -115,7 +126,6 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/order.js"></script>
-
 </body>
 
 </html>
