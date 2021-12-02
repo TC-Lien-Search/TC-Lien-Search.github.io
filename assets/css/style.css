@@ -1485,8 +1485,10 @@ form label {
   border:solid thin cadetblue;
 }
 .form-submit {
+  display:block;
   cursor:pointer;
   box-shadow:1px 1px 4px black;
+  margin:0 auto;
 }
 .form-submit:active {
   box-shadow:none;

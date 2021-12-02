@@ -1,9 +1,6 @@
 (function() {
   "use strict";
 
-  // Initiate EmailJS
-  emailjs.init("user_0gRGuJbPC5KgSYxF5CZOR");
-
   /**
    * Easy selector helper function
    */
@@ -124,6 +121,8 @@
     }
   }, true)
 
+  // Initiate EmailJS
+  emailjs.init("user_0gRGuJbPC5KgSYxF5CZOR");
   // Contact Form Submit
   on('submit','#contact-form', function(e){
     e.preventDefault();

@@ -1,10 +1,5 @@
   'use strict';
 
-  let searchTimeout;
-
-  // Initiate EmailJS
-  emailjs.init("user_0gRGuJbPC5KgSYxF5CZOR");
-
   /**
    * Easy selector helper function
    */
@@ -31,26 +26,14 @@
     }
   }
 
-    // Contact Form Submit
-  on('submit','#order-form', function(e){
-    e.preventDefault();
-    // emailjs.sendForm('service_2qal3w6','template_1h7dyyt', '#order-form')
-    // .then(resp => {
-    //   document.querySelector('.sent-message').style.display = 'block';
-    // })
-    // .catch(err =>{
-    //   document.querySelector('.error-message').style.display = 'block';
-    // })
-  });
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+/**
+ * Mobile nav toggle
+ */
+on('click', '.mobile-nav-toggle', function(e) {
+  select('#navbar').classList.toggle('navbar-mobile')
+  this.classList.toggle('bi-list')
+  this.classList.toggle('bi-x')
+})
 
 //Geocode API (geocodeapi.com)
 let geocodeCont = document.querySelector('.geocode-outer');
@@ -58,18 +41,21 @@ let propertyAddressElem = document.getElementById('property_address');
 
 propertyAddressElem.addEventListener('keyup', propertyAddressListener, false);
 
+// Manual Address Checkbox Handling
+let manualAddressInput = document.getElementById('manual_address');
 document.querySelector('.manual-address-checkbox').addEventListener('click', e => {
   if(e.target.checked){
-    e.target.value = true;
+    manualAddressInput.value = "Yes";
     propertyAddressElem.removeEventListener('keyup', propertyAddressListener, false);
     geocodeCont.classList.add('d-none');
   } else {
-    e.target.value = false;
+    manualAddressInput.value = "No";
     propertyAddressElem.addEventListener('keyup', propertyAddressListener, false);
     geocodeCont.classList.remove('d-none');
   }
 })
 
+let searchTimeout;
 function propertyAddressListener(e){
   clearTimeout(searchTimeout);
   searchTimeout = setTimeout(()=>{
@@ -101,10 +87,8 @@ function propertyAddressListener(e){
   }, 1000);
 }
 
-document.querySelector('.form-submit').addEventListener('click', e =>{
-
-})
-
+// Initiate EmailJS
+emailjs.init("user_0gRGuJbPC5KgSYxF5CZOR");
 // Contact Form Submit
 on('submit','#order-form', function(e){
   e.preventDefault();

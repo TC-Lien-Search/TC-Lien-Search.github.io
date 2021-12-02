@@ -89,16 +89,21 @@
                 </div>
               </div>
               <div class="form-group mt-2">
-                <input class="form-check-input manual-address-checkbox" type="checkbox" value="false" name="manual_address" id="manual_address">
-                <label class="form-check-label manual-address-label" for="manual_address">
+                <input class="form-check-input manual-address-checkbox" type="checkbox" value="false" id="manual-address-toggle">
+                <label class="form-check-label manual-address-label" for="manual-address-toggle">
                   Enter Address Manually (if you can't find it or it's not exact)
                 </label>
+              </div>
+              <div class="form-group mt-3 d-none">
+                <input type="text" value="No" name="manual_address" id="manual_address" />
               </div>
               <div class="form-group mt-3">
                 <label>Notes:</label>
                 <textarea class="form-control" name="notes" rows="5" placeholder="Any additional information you would like us to be aware of" required></textarea>
               </div>
-              <button type="submit" class="form-submit btn btn-primary mt-5">Request Lien Search</button>
+              <div class="form-group mt-3">
+                <button type="submit" class="form-submit btn btn-primary mt-5">Request Lien Search</button>
+              </div>
               <div class="order-form-msg">
                 <p class="order-form-success"></p>
                 <p class="order-form-fail"></p>
