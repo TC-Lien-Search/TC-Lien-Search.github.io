@@ -70,15 +70,11 @@
                 <input type="text" class="form-control" name="phone" id="phone" required>
               </div>
               <div class="form-group mt-3">
-                <label>Parcel ID:</label>
-                <input type="text" class="form-control" name="parcel_id" id="parcel_id" required>
+                <label>Name of Owner(s):</label>
+                <input type="text" class="form-control" name="owner_name" id="owner_name" required>
               </div>
               <div class="form-group mt-3">
-                <label>Seller Full Name:</label>
-                <input type="text" class="form-control" name="seller_name" id="seller_name" required>
-              </div>
-              <div class="form-group mt-3">
-                <label>Buyer Full Name (optional):</label>
+                <label>Name of Buyer(s) (optional):</label>
                 <input type="text" class="form-control" name="buyer_name" id="buyer_name">
               </div>
               <div class="form-group mt-3">
@@ -94,12 +90,16 @@
                   Enter Address Manually (if you can't find it or it's not exact)
                 </label>
               </div>
+              <div class="form-group mt-3">
+                <label>Parcel ID (optional):</label>
+                <input type="text" class="form-control" name="parcel_id" id="parcel_id">
+              </div>
               <div class="form-group">
                 <input type="hidden" value="No" name="manual_address" id="manual_address" />
               </div>
               <div class="form-group mt-3">
-                <label>Notes:</label>
-                <textarea class="form-control" name="notes" rows="5" placeholder="Any additional information you would like us to be aware of" required></textarea>
+                <label>Notes (optional):</label>
+                <textarea class="form-control" name="notes" rows="5" placeholder="Any additional information you would like us to be aware of"></textarea>
               </div>
               <div class="form-group mt-3">
                 <button type="submit" class="form-submit btn btn-primary mt-5">Request Lien Search</button>
